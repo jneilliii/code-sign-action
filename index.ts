@@ -82,7 +82,7 @@ async function signWithSigntool(fileName: string) {
             command = command + ` /debug`
         }
 
-        command = command + ` ${fileName}`; 
+        command = command + ` "${fileName}"`; 
 
         console.log("Signing command: " + command); 
         const { stdout } = await asyncExec(command);
