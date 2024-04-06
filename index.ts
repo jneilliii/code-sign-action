@@ -81,6 +81,10 @@ async function signWithSigntool(fileName: string) {
         if (debugMode != ''){
             command = command + ` /debug`
         }
+        const description : string= core.getInput('cert-description');
+        if (description != ''){
+            command = command + ` /d "${description}"`
+        }
 
         command = command + ` "${fileName}"`; 
 

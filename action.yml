@@ -28,6 +28,9 @@ inputs:
   debug:
     description: 'Enable debug option'
     required: false
+  cert-description:
+    description: 'Descrption'
+    required: false
 
 runs:
   using: 'node20'
